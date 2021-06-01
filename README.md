@@ -1,10 +1,13 @@
 #define Capteur_Avant_1 1
-#define Capteur_Avant_2 2
+#define Capteur_s_Avant_2 2
+#define Capteur_s_Avant_echo_2 10
 #define Capteur_Avant_3 3
-#define Capteur_Gauche 4
-#define Capteur_Droite 5
+#define Capteur_s_Gauche 4
+#define Capteur_s_Gauche_echo 11
+#define Capteur_s_Droite 5
+"define Capteur_s_Droite_echo 12
 #define Capteur_Arriere 6
-#define Capteur_Sol 7
+#define Capteur_s_Sol 7
 #define Moteur_1 8
 #define Moteur_2 9
 
@@ -39,7 +42,7 @@ void loop() {
  }
  
 //capteur avant 2
- if (digitalRead(Capteur_Avant_2) == HIGH){
+ if (digitalRead(Capteur_s_Avant_2) == HIGH){
  digitalWrite(Moteur_1, LOW);
  digitalWrite(Moteur_2, LOW);
  }
@@ -50,6 +53,46 @@ void loop() {
 
 //capteur avant 3
 if (digitalRead(Capteur_Avant_3) == HIGH){
+ digitalWrite(Moteur_1, LOW);
+ digitalWrite(Moteur_2, LOW);
+ }
+ else {
+  digitalWrite(Moteur_1, HIGH);
+  digitalWrite(Moteur_2, HIGH); 
+ }
+
+//capteur gauche
+if (digitalRead(Capteur_s_Gauche) == HIGH){
+ digitalWrite(Moteur_1, LOW);
+ digitalWrite(Moteur_2, LOW);
+ }
+ else {
+  digitalWrite(Moteur_1, HIGH);
+  digitalWrite(Moteur_2, HIGH); 
+ }
+ 
+//capteur Droite
+if (digitalRead(Capteur_s_Droite) == HIGH){
+ digitalWrite(Moteur_1, LOW);
+ digitalWrite(Moteur_2, LOW);
+ }
+ else {
+  digitalWrite(Moteur_1, HIGH);
+  digitalWrite(Moteur_2, HIGH); 
+ }
+ 
+//capteur arrière
+if (digitalRead(Capteur_Arrière) == HIGH){
+ digitalWrite(Moteur_1, LOW);
+ digitalWrite(Moteur_2, LOW);
+ }
+ else {
+  digitalWrite(Moteur_1, HIGH);
+  digitalWrite(Moteur_2, HIGH); 
+ }
+
+//capteur sol
+if (digitalRead(Capteur_s_Sol) == HIGH){
  digitalWrite(Moteur_1, LOW);
  digitalWrite(Moteur_2, LOW);
  }
