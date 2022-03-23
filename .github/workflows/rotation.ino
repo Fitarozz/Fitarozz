@@ -21,8 +21,9 @@ void setup() {
 
 
 void loop() {
+  
   // départ a 45 degres
-    delay(10000); // delay de 10s
+  delay(10000); // delay de 10s
   
   // rotation vers l'angle 0
 
@@ -80,16 +81,182 @@ void loop() {
   
   
   // rotation vers l'angle -45
-
+ 
+  
   actionMoteur(1,-1,100); //moteur 1 100% puissance sens -1
 
   delay(720); //attente de 0.72 secondes
   
   actionMoteur(1,0,0); //arrêt moteur 1
   
+  
+  // moteur 2 translation
+  
+  actionMoteur(2,1,100); //moteur 2 100% puissance sens 1
+  
+  delay(5000); // delay de 5s
+  
+  actionMoteur(2,0,0); //arrêt moteur 2
+  
+  
+  
+  
+  //deuxieme translation
+  // départ a 45 degres
+  delay(10000); // delay de 10s
+  
+  // rotation vers l'angle 0
 
+  actionMoteur(1,1,100); //moteur 1 100% puissance sens 1
+
+  delay(135); //attente de 0.135 secondes
+  
+  actionMoteur(1,0,0); //arrêt moteur 1
+  
+  delay(10000); // delay de 10s
   
   
+   // rotation vers l'angle 45
+
+  actionMoteur(1,1,100); //moteur 1 100% puissance sens 1
+
+  delay(135); //attente de 0.135 secondes
+  
+  actionMoteur(1,0,0); //arrêt moteur 1
+  
+  delay(10000); // delay de 10s
+  
+  
+  // rotation vers l'angle 135
+
+  actionMoteur(1,1,100); //moteur 1 100% puissance sens 1
+
+  delay(270); //attente de 0.27 secondes
+  
+  actionMoteur(1,0,0); //arrêt moteur 1
+  
+  delay(10000); // delay de 10s
+  
+  
+   // rotation vers l'angle 180
+
+  actionMoteur(1,1,100); //moteur 1 100% puissance sens 1
+
+  delay(135); //attente de 0.135 secondes
+  
+  actionMoteur(1,0,0); //arrêt moteur 1
+  
+  delay(10000); // delay de 10s
+  
+  
+  // rotation vers l'angle 225
+
+  actionMoteur(1,1,100); //moteur 1 100% puissance sens 1
+
+  delay(135); //attente de 0.135 secondes
+  
+  actionMoteur(1,0,0); //arrêt moteur 1
+  
+  delay(10000); // delay de 10s
+  
+  
+  // rotation vers l'angle -45
+ 
+  
+  actionMoteur(1,-1,100); //moteur 1 100% puissance sens -1
+
+  delay(720); //attente de 0.72 secondes
+  
+  actionMoteur(1,0,0); //arrêt moteur 1
+  
+  
+  // moteur 2 translation
+  
+  actionMoteur(2,1,100); //moteur 2 100% puissance sens 1
+  
+  delay(5000); // delay de 5s
+  
+  actionMoteur(2,0,0); //arrêt moteur 2
+  
+  
+  
+  
+  //troisieme translation
+  // départ a 45 degres
+  delay(10000); // delay de 10s
+  
+  // rotation vers l'angle 0
+
+  actionMoteur(1,1,100); //moteur 1 100% puissance sens 1
+
+  delay(135); //attente de 0.135 secondes
+  
+  actionMoteur(1,0,0); //arrêt moteur 1
+  
+  delay(10000); // delay de 10s
+  
+  
+   // rotation vers l'angle 45
+
+  actionMoteur(1,1,100); //moteur 1 100% puissance sens 1
+
+  delay(135); //attente de 0.135 secondes
+  
+  actionMoteur(1,0,0); //arrêt moteur 1
+  
+  delay(10000); // delay de 10s
+  
+  
+  // rotation vers l'angle 135
+
+  actionMoteur(1,1,100); //moteur 1 100% puissance sens 1
+
+  delay(270); //attente de 0.27 secondes
+  
+  actionMoteur(1,0,0); //arrêt moteur 1
+  
+  delay(10000); // delay de 10s
+  
+  
+   // rotation vers l'angle 180
+
+  actionMoteur(1,1,100); //moteur 1 100% puissance sens 1
+
+  delay(135); //attente de 0.135 secondes
+  
+  actionMoteur(1,0,0); //arrêt moteur 1
+  
+  delay(10000); // delay de 10s
+  
+  
+  // rotation vers l'angle 225
+
+  actionMoteur(1,1,100); //moteur 1 100% puissance sens 1
+
+  delay(135); //attente de 0.135 secondes
+  
+  actionMoteur(1,0,0); //arrêt moteur 1
+  
+  delay(10000); // delay de 10s
+  
+  
+  // rotation vers l'angle -45
+ 
+  
+  actionMoteur(1,-1,100); //moteur 1 100% puissance sens -1
+
+  delay(720); //attente de 0.72 secondes
+  
+  actionMoteur(1,0,0); //arrêt moteur 1
+  
+  
+  // moteur 2 translation
+  
+  actionMoteur(2,-1,100); //moteur 2 100% puissance sens 1
+  
+  delay(15000); // delay de 15s
+  
+  actionMoteur(2,0,0); //arrêt moteur 2
 
 }
 
@@ -145,29 +312,5 @@ void actionMoteur(int moteur,int sens,int pourcentage){
   digitalWrite(pin1,etat1);
 
   digitalWrite(pin2,etat2);
-
-  //affichage sur le moniteur série (facultatif)
-
-  Serial.print("Moteur : ");
-
-  Serial.print(moteur);
-
-  if (sens==-1 || sens==1){
-
-    Serial.print(" sens : ");
-
-    Serial.print(sens);
-
-  }
-
-  else {
-
-    Serial.print(" ! stop ! ");
-
-  }
-
-  Serial.print(" puissance : ");
-
-  Serial.println(pourcentage);
 
 }
